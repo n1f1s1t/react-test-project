@@ -13,11 +13,25 @@ class App extends Component {
   }
 
   onClick = button => {
-    this.setState({
-      result: this.state.result + button
-    })
+    if (button === "C"){
+      this.delete()
+    }
+    else { 
+      this.setState({
+      result: this.state.result + button})
+    }
+  }
+
+  logic = () => {
+    
   }
   
+  delete = () => {
+    this.setState({
+      result: ""
+    })
+  }
+
   render() {
     return (
     <div> 
