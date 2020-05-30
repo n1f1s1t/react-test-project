@@ -8,7 +8,8 @@ class App extends Component {
     super();
 
     this.state = {
-      result: "",
+      first_value: "",
+      second_value: "",
       operation: ""
     }
   }
@@ -22,7 +23,7 @@ class App extends Component {
     }
     else { 
       this.setState({
-      result: this.state.result + button})
+        first_value: this.state.first_value + button})
     }
   }
 
@@ -32,13 +33,13 @@ class App extends Component {
   
   delete = () => {
     this.setState({
-      result: ""
+      first_value: ""
     })
   }
 
   backspace = () => {
     this.setState({
-      result: this.state.result.slice(0, -1)
+      first_value: this.state.first_value.slice(0, -1)
     })
   }
 
