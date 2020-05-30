@@ -8,7 +8,8 @@ class Keyboard extends Component {
                 <div>
                     <button name="0" onClick={e => this.props.onClick(e.target.name)}>0</button>
                     <button name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
-                    <button name="C" onClick={e => this.props.onClick(e.target.name)}>C</button>
+                    <button name="C" onClick={e => this.props.onClick(e.target.name)}>C</button>                    
+                    <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>                    
                     <button name="+" onClick={e => this.props.onClick(e.target.name)}>+</button>
                 </div>
                 <div>

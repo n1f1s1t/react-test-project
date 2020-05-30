@@ -8,12 +8,16 @@ class App extends Component {
     super();
 
     this.state = {
-      result: ""
+      result: "",
+      operation: ""
     }
   }
 
   onClick = button => {
-    if (button === "C"){
+    if (button === "CE"){
+      this.backspace()
+    }
+    else if (button === "C"){
       this.delete()
     }
     else { 
@@ -29,6 +33,12 @@ class App extends Component {
   delete = () => {
     this.setState({
       result: ""
+    })
+  }
+
+  backspace = () => {
+    this.setState({
+      result: this.state.result.slice(0, -1)
     })
   }
 
