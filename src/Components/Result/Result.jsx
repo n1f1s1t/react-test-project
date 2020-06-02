@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './Result.module.css'
+import classes from './Result.module.css';
 
 class Result extends Component {
 
@@ -10,8 +10,7 @@ class Result extends Component {
             <div className={classes.result}>
                 <p>{result}</p>
             </div>
-    )
-        ;
+    );
     }
 }
 

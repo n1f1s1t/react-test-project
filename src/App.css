@@ -1,0 +1,16 @@
+.calculator{
+    display: grid;
+    grid-template-areas: 
+    "post-rez"
+    "post-calc";
+    grid-template-columns: 400px;
+    grid-template-rows: 100px 500px;
+}
+
+.post-1{
+    grid-area: post-1;
+}
+
+.post-2{
+    grid-area: post-2;
+}

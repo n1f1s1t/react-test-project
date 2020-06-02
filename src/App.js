@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       first_value: "",
       second_value: "",
-      operation: ""
+      operation: "",
     }
   }
 
@@ -45,9 +45,9 @@ class App extends Component {
 
   render() {
     return (
-    <div> 
-      <Result result={this.state.result}/>
-      <Keyboard onClick={this.onClick}/>
+    <div className="calculator"> 
+      <div className="post-rez"><Result result={this.state.first_value} /></div>
+      <div className="post-calc"><Keyboard onClick={this.onClick} /></div>
     </div>
     )
   }
