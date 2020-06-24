@@ -6,7 +6,7 @@ class Keyboard extends Component {
         return (
             <div className={classes.keyboard}>
                     <button className={classes.zero} name="0" onClick={e => this.props.onClick(e.target.name)}>0</button>
-                    <button className={classes.ravno} name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
+                    <button className={classes.equals} name="=" onClick={e => this.props.onClick(e.target.name)}>=</button>
                     <button className={classes.C} name="C" onClick={e => this.props.onClick(e.target.name)}>C</button>                    
                     <button className={classes.CE} name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>                    
                     <button className={classes.plus} name="+" onClick={e => this.props.onClick(e.target.name)}>+</button>

@@ -8,9 +8,7 @@ class App extends Component {
     super();
 
     this.state = {
-      first_value: "",
-      second_value: "",
-      operation: "",
+      result: "",
     }
   }
 
@@ -21,32 +19,54 @@ class App extends Component {
     else if (button === "C"){
       this.delete()
     }
+    else if (button ==="="){
+      this.calculate()
+    }
     else { 
       this.setState({
-        first_value: this.state.first_value + button})
+        result: this.state.result + button})
     }
-  }
-
-  logic = () => {
-    
   }
   
   delete = () => {
     this.setState({
-      first_value: ""
+      result: ""
     })
   }
 
   backspace = () => {
     this.setState({
-      first_value: this.state.first_value.slice(0, -1)
+      result: this.state.result.slice(0, -1)
     })
   }
+
+  calculate = () => {
+    var checkResult = ''
+    if(this.state.result.includes('--')){
+        checkResult = this.state.result.replace('--','+')
+    }
+
+    else {
+        checkResult = this.state.result
+    }
+
+    try {
+        this.setState({
+            // eslint-disable-next-line
+            result: (eval(checkResult) || "" ) + ""
+        })
+    } catch (e) {
+        this.setState({
+            result: "error"
+        })
+
+    }
+  };
 
   render() {
     return (
     <div className="calculator"> 
-      <div className="post-rez"><Result result={this.state.first_value} /></div>
+      <div className="post-rez"><Result result={this.state.result} /></div>
       <div className="post-calc"><Keyboard onClick={this.onClick} /></div>
     </div>
     )

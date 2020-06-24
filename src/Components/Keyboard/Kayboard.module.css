@@ -5,7 +5,7 @@
     "one two three minus"
     "four five six multiply"
     "seven eight nine divide"
-    "ravno ravno ravno ravno";
+    "equals equals equals equals";
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-rows: 100px 100px 100px 100px 100px;
 }
@@ -52,6 +52,6 @@
 .divide{
     grid-area: divide;
 }
-.ravno{
-    grid-area: ravno;
+.equals{
+    grid-area: equals;
 }
